@@ -1,36 +1,12 @@
-import random
-import os
-#from os import urandom
-from lottery2 import gen_random_array2
+
+from lottery import gen_random_array
+#from lottery2 import gen_random_array2
 
 array = ["0"] * 80
 counter = ["0"] * 255
 
-#陣列中產生不重複的數字寫到
-def gen_random_array():
-  for i in range(1,len(array)+1):
-    #print("index = ", i-1)
-    while True:
-      array[i-1] = random.randint(1,80)    
-      for j in range(1,i+1):
-        if array[i-1] == array[j-1]:
-          break
-      if (j == i):
-          break
-    #print("index",i-1, " = ",array[i-1])
-  print(array)
-
-#gen_random_array()
-gen_random_array2(array,counter)
-
-#prize_num = ["3", "5"]
-a1=3
-a2=5
-a3=a1+a2
-#print(a3)
-
-array3 = os.urandom(3)
-print(array3)
+gen_random_array(array)
+#gen_random_array2(array,counter)
 
 prize_num = ["3", "5", "5", "5", "2",
             "8", "5", "2", "3", "3", 
@@ -48,7 +24,6 @@ for i in range(0,len(prize_num)):
   offset = offset + size
   #print('p{i} = array2{array2}'.format(i=i, array2=array2)
   #offset = offset + size
-
 
 '''
 p1 = array[:3]
@@ -94,21 +69,22 @@ p20 = array[:]
 print("p20=",p20)
 p21 = array[:]
 print("p21=",p21)
+'''
 
+'''
 for i in range(0,21):
   #print("print(","p",i,"=",",","p",i,")")
   #print("print(\"p1=\",p1)")
-  #print('p{i} = array[:]'.format(i=i+1))
-  #print('print("p{i}=",p{i})'.format(i=i+1))
-  print('"", ', end = '')
-  
+  print('p{i} = array[:]'.format(i=i+1))
+  print('print("p{i}=",p{i})'.format(i=i+1))
+'''  
+'''
 name = 'Jack'
 text = 'world'
 
 print('hello {name}, hello {text}'.format(name=name, text=text))
-
-
-
+'''
+'''        
 int i = 1;
 do{
   printf("%d\n", i);
